@@ -1,0 +1,327 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Decisium Consultoria</title>
+<style>
+  :root{
+    --navy:#14212b; --navy-mid:#2b4759; --paper:#fbf9f6; --paper-2:#f1ede6;
+    --ink:#3c4a54; --border:#ddd6cb; --gold:#a8763e; --gold-soft:#cba669; --muted:#7c8a92;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --paper:#12191d; --paper-2:#1a2328; --ink:#cdd8dd; --border:#2c363b; --muted:#8fa8b8; }
+  }
+  :root[data-theme="dark"]{ --paper:#12191d; --paper-2:#1a2328; --ink:#cdd8dd; --border:#2c363b; --muted:#8fa8b8; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Spectral',serif;font-weight:600;margin:0;text-wrap:balance;color:var(--navy)}
+  :root[data-theme="dark"] h1,:root[data-theme="dark"] h2,:root[data-theme="dark"] h3{color:#f3f0ea}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) h1,:root:not([data-theme="light"]) h2,:root:not([data-theme="light"]) h3{color:#f3f0ea}}
+  p{margin:0;text-wrap:pretty}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding-inline:24px}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:2px;padding:13px 24px;font:600 14.5px/1 'Archivo',sans-serif;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:opacity .15s ease}
+  .btn:hover{opacity:.87}
+  .btn-gold{background:var(--gold);color:#fff}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-line{background:transparent;border-color:var(--navy);color:var(--navy)}
+  :root[data-theme="dark"] .btn-line{border-color:#f3f0ea;color:#f3f0ea}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-line{border-color:#f3f0ea;color:#f3f0ea}}
+  .btn-sm{padding:9px 17px;font-size:13px}
+  .btn-block{width:100%;justify-content:center}
+
+  header{background:var(--paper);border-bottom:1px solid var(--border)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding-block:16px}
+  .brand{display:flex;align-items:center;gap:9px;color:var(--navy);font:600 17px/1 'Spectral',serif}
+  :root[data-theme="dark"] .brand{color:#f3f0ea}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand{color:#f3f0ea}}
+
+  /* hero — left open, no photo/graphic device */
+  .hero{background:var(--navy);color:#fbf9f6}
+  .hero-inner{padding-block:60px 56px;max-width:760px}
+  .hero h1{font-size:clamp(28px,4vw,42px);line-height:1.16;color:#fff}
+  .hero p.lede{font:300 17px/1.6 'Spectral',serif;color:#d7e0e5;max-width:56ch;margin-top:18px}
+  .hero-paths{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+
+  section{padding-block:70px}
+  .section-head{max-width:640px;margin-bottom:8px}
+  .eyebrow{font:italic 400 15px/1 'Spectral',serif;color:var(--gold)}
+  .section-head h2{font-size:clamp(23px,2.8vw,30px);margin-top:8px}
+  .section-head p{font:300 15.5px/1.6 'Spectral',serif;color:var(--ink);margin-top:12px}
+
+  /* two paths */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:36px}
+  @media (max-width:820px){.paths{grid-template-columns:1fr}}
+  .path{background:var(--paper);padding:34px 32px;display:flex;flex-direction:column}
+  .path-for{font:500 11.5px/1 'Archivo',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .path h3{font-size:23px;margin-top:10px}
+  .path .desc{font:300 14.5px/1.6 'Spectral',serif;color:var(--ink);margin-top:12px}
+  .path-list{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;flex:1}
+  .path-list li{font:300 14px/1.5 'Spectral',serif;color:var(--ink);padding-left:18px;position:relative}
+  .path-list li::before{content:"—";position:absolute;left:0;color:var(--gold)}
+  .path-foot{margin-top:24px;padding-top:20px;border-top:1px solid var(--border)}
+  .path-price{font:600 26px/1 'Spectral',serif;color:var(--navy)}
+  :root[data-theme="dark"] .path-price{color:#f3f0ea}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .path-price{color:#f3f0ea}}
+  .path-price span{font:400 12px/1 'Archivo',sans-serif;color:var(--muted);display:block;margin-top:4px}
+  .path-note{font:italic 400 13px/1.5 'Spectral',serif;color:var(--muted)}
+
+  /* how it works */
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:8px}
+  @media (max-width:760px){.flow{grid-template-columns:1fr}}
+  .flow-cell{padding:22px 24px 22px 0;border-left:2px solid var(--border)}
+  .flow-cell:first-child{border-left:none;padding-left:0}
+  @media (max-width:760px){.flow-cell{border-left:none;border-top:2px solid var(--border);padding:22px 0}.flow-cell:first-child{border-top:none;padding-top:0}}
+  .flow-phase{font:500 12px/1 'Archivo',sans-serif;letter-spacing:.04em;color:var(--muted)}
+  .flow-cell h3{font-size:18px;margin-top:8px}
+  .flow-cell p{margin-top:9px;font:300 14px/1.6 'Spectral',serif;color:var(--ink)}
+
+  /* credentials */
+  .cred-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+  @media (max-width:820px){.cred-grid{grid-template-columns:1fr}}
+  .cred-name{font:600 21px/1.25 'Spectral',serif;color:var(--navy)}
+  :root[data-theme="dark"] .cred-name{color:#f3f0ea}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cred-name{color:#f3f0ea}}
+  .cred-role{font:italic 400 14.5px/1.4 'Spectral',serif;color:var(--gold);margin-top:6px}
+  .cred-ids{margin-top:10px;font:500 12.5px/1.6 'JetBrains Mono',monospace;color:var(--muted)}
+
+  .cred-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+  .cred-list li{font:300 14.5px/1.6 'Spectral',serif;color:var(--ink);padding-block:9px;border-bottom:1px solid var(--border)}
+  .cred-list li:first-child{padding-top:0}
+
+  .record{margin-top:26px;border-top:1px solid var(--border)}
+  .record-row{display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--border)}
+  .record-row .yr{font:500 12.5px/1 'JetBrains Mono',monospace;color:var(--muted)}
+  .record-row .desc{font:400 13.5px/1.4 'Spectral',serif;color:var(--ink)}
+  .record-mark{font:600 13px/1 'Archivo',sans-serif;color:var(--gold);white-space:nowrap}
+
+  details{border-bottom:1px solid var(--border);padding-block:17px}
+  summary{cursor:pointer;font:600 15px/1.4 'Archivo',sans-serif;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+  :root[data-theme="dark"] summary{color:#f3f0ea}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) summary{color:#f3f0ea}}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font:400 19px/1 'Spectral',serif;color:var(--gold);flex:none}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:11px;font:300 14px/1.6 'Spectral',serif;color:var(--ink);max-width:64ch}
+  .faq-tag{display:inline-block;font:500 10px/1 'Archivo',sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius:2px;padding:3px 7px;margin-right:10px;vertical-align:1px}
+
+  .final{background:var(--navy-mid);color:#fbf9f6;text-align:left}
+  .final h2{color:#fff;font-size:clamp(22px,2.9vw,30px);max-width:22ch}
+  .final p{font:300 15.5px/1.6 'Spectral',serif;color:#d7e0e5;max-width:52ch;margin-top:13px}
+  .final .hero-paths{margin-top:26px}
+
+  footer{background:var(--paper);color:var(--muted);padding-block:24px;font:400 12.5px/1.6 'Spectral',serif;border-top:1px solid var(--border)}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,400;1,500&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <img src="brand-mark-dark.png" alt="" height="22" style="width:auto"/>
+      Decisium
+    </div>
+    <a class="btn btn-line btn-sm" href="#caminhos">Ver consultorias</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <h1>Medicina Legal aplicada — para quem decide um processo e para quem decide uma prova.</h1>
+    <p class="lede">Consultoria individual com Paulo Romero Calou de Araújo e Mendonça, Perito Oficial Médico-Legista aprovado em concursos de perícia em dois estados. Duas frentes de atuação, um único especialista.</p>
+    <div class="hero-paths">
+      <a class="btn btn-gold" href="#advogados">Sou advogado(a)</a>
+      <a class="btn btn-line" href="#candidatos">Sou candidato(a) a concurso</a>
+    </div>
+  </div>
+</section>
+
+<section id="caminhos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Duas frentes de atuação</div>
+      <h2>A mesma experiência pericial, aplicada a dois momentos diferentes</h2>
+      <p>Quem já esteve nos dois lados — na prova e no laudo — sabe onde cada um pesa. Escolha a consultoria que corresponde ao seu momento.</p>
+    </div>
+
+    <div class="paths">
+      <div class="path" id="advogados">
+        <div class="path-for">Para advogados</div>
+        <h3>Consultoria para processos em curso</h3>
+        <p class="desc">Apoio técnico direto para quem já está atuando num processo com prova pericial médico-legal — de quem lida com laudos todos os dias e sabe exatamente onde procurar a fragilidade.</p>
+        <ul class="path-list">
+          <li>Apontamentos técnicos sobre laudo pericial já produzido</li>
+          <li>Opinião especializada (parecer) sobre o caso</li>
+          <li>Tira-dúvidas pontual sobre a fase processual em curso</li>
+          <li>Apoio na construção da tese de defesa</li>
+          <li>Auxílio na formulação de quesitos periciais</li>
+        </ul>
+        <div class="path-foot">
+          <div class="path-price">R$ 499,90<span>ou 3× de R$ 166,67 sem juros · garantia de 7 dias</span></div>
+          <div class="path-note" style="margin-top:10px">A contratação garante uma análise técnica preliminar do caso em epígrafe — não configura assunção como assistente técnico no processo.</div>
+          <a class="btn btn-navy btn-block" style="margin-top:16px" href="#">Analisar meu caso</a>
+        </div>
+      </div>
+
+      <div class="path" id="candidatos">
+        <div class="path-for">Para candidatos a concurso</div>
+        <h3>Mentoria para concursos de perícia</h3>
+        <p class="desc">Preparação individual em Medicina Legal para concursos de perícia oficial — conduzida por quem já foi aprovado sete vezes, em bancas diferentes, em estados diferentes.</p>
+        <ul class="path-list">
+          <li>Encontros individuais semanais com o perito</li>
+          <li>Material de apoio completo — resumos e esquemas direcionados</li>
+          <li>Suporte direto por WhatsApp entre os encontros</li>
+          <li>Conteúdo ajustado ao seu ponto atual de preparação</li>
+        </ul>
+        <div class="path-foot">
+          <div class="path-price">R$ 499,90<span>ou 3× de R$ 166,67 sem juros · garantia de 7 dias</span></div>
+          <a class="btn btn-gold btn-block" style="margin-top:16px" href="#">Garantir minha vaga</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Como funciona a consultoria para advogados</div>
+      <h2>Uma leitura técnica do seu processo, não uma opinião genérica</h2>
+      <p>Sem modelo padrão de parecer. Cada análise parte do laudo e das peças que você enviar.</p>
+    </div>
+    <div class="flow">
+      <div class="flow-cell">
+        <div class="flow-phase">ANTES DO ENVIO</div>
+        <h3>Você reúne o material do caso</h3>
+        <p>Laudo pericial, peças do processo e o ponto que você quer atacar ou sustentar.</p>
+      </div>
+      <div class="flow-cell">
+        <div class="flow-phase">DURANTE A ANÁLISE</div>
+        <h3>Leitura técnica linha a linha</h3>
+        <p>Exame do laudo com o olhar de quem já elaborou centenas — e sabe onde a perícia costuma errar.</p>
+      </div>
+      <div class="flow-cell">
+        <div class="flow-phase">DEPOIS DA ANÁLISE</div>
+        <h3>Devolutiva com a leitura do caso</h3>
+        <p>Retorno objetivo com pontos fortes e fragilidades identificados no laudo. Parecer técnico formal, se for necessário, é um serviço à parte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Como funciona a mentoria de concurso</div>
+      <h2>Uma consultoria conduzida, não um curso gravado</h2>
+      <p>Sem playlist de vídeos genéricos. Cada encontro é ajustado ao que você precisa naquela semana.</p>
+    </div>
+    <div class="flow">
+      <div class="flow-cell">
+        <div class="flow-phase">ANTES DO ENCONTRO</div>
+        <h3>Você chega com as dúvidas da semana</h3>
+        <p>Ele já sabe onde você travou — no encontro anterior ou no material que ficou entre as sessões.</p>
+      </div>
+      <div class="flow-cell">
+        <div class="flow-phase">DURANTE O ENCONTRO</div>
+        <h3>Uma hora de atenção individual</h3>
+        <p>Ajustada ao seu ponto atual de preparação, não a uma grade igual pra todo mundo.</p>
+      </div>
+      <div class="flow-cell">
+        <div class="flow-phase">DEPOIS DO ENCONTRO</div>
+        <h3>Material e suporte até a próxima semana</h3>
+        <p>Resumos, esquemas e contato direto por WhatsApp — dúvida não espera sete dias pra ser respondida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="curriculo">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Quem atende os dois lados</div>
+      <h2>Currículo do perito</h2>
+    </div>
+    <div class="cred-grid" style="margin-top:32px">
+      <div>
+        <img src="paulo-romero.jpg" alt="Paulo Romero Calou de Araújo e Mendonça" style="width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--border)"/>
+        <div class="cred-name" style="margin-top:16px">Paulo Romero Calou<br/>de Araújo e Mendonça</div>
+        <div class="cred-role">Perito Oficial Médico-Legista</div>
+        <div class="cred-ids">CREMEC 15565 · RQE 15281</div>
+      </div>
+      <div>
+        <h3 style="font-size:16px;font-style:italic;color:var(--gold);margin-bottom:14px">Formação e atuação</h3>
+        <ul class="cred-list">
+          <li>Perito Oficial Médico-Legista em atuação, com prática diária em exames de corpo de delito, laudos periciais e pareceres técnicos</li>
+          <li>Médico formado pela Universidade de Fortaleza, especialista em Medicina de Emergência</li>
+          <li>Pós-graduado em Urgência e Emergência Pré-Hospitalar</li>
+          <li>Médico da UTI Adulto do Hospital Geral Dr. Waldemar Alcântara</li>
+          <li>Médico emergencista do Instituto Dr. José Frota (Centro de Trauma)</li>
+          <li>Instrutor AHA (ACLS) e NAEMT (PHTLS)</li>
+        </ul>
+
+        <h3 style="font-size:16px;font-style:italic;color:var(--gold);margin:22px 0 4px">Concursos aprovados</h3>
+        <div class="record">
+          <div class="record-row"><div class="yr">2016</div><div class="desc">Perito Oficial Médico-Legista, Polícia Civil de Pernambuco</div><div class="record-mark">Aprovado</div></div>
+          <div class="record-row"><div class="yr">2017</div><div class="desc">Perito Oficial Médico-Legista, Polícia Científica do Paraná</div><div class="record-mark">Aprovado</div></div>
+          <div class="record-row"><div class="yr">2017</div><div class="desc">Oficial Médico, Marinha de Guerra do Brasil (CP-CSM)</div><div class="record-mark">Aprovado</div></div>
+          <div class="record-row"><div class="yr">—</div><div class="desc">SAMU 192 (CONSAMU), Cascavel/PR</div><div class="record-mark">Aprovado</div></div>
+          <div class="record-row"><div class="yr">2024</div><div class="desc">Secretaria Municipal de Saúde de Fortaleza (FAGIFOR)</div><div class="record-mark">Aprovado</div></div>
+          <div class="record-row"><div class="yr">2024</div><div class="desc">Perito Oficial Médico-Legista, Paraná — 2ª vez</div><div class="record-mark">Aprovado</div></div>
+          <div class="record-row"><div class="yr">2025</div><div class="desc">Oficial Médico, Polícia Militar do Ceará (QOCPM)</div><div class="record-mark">Aprovado</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Perguntas frequentes</div>
+      <h2>Antes de você entrar em contato</h2>
+    </div>
+    <div style="max-width:740px;margin-top:8px">
+      <details open>
+        <summary><span><span class="faq-tag">Advogados</span>Como funciona o parecer sobre o laudo?</span></summary>
+        <p>Você envia o laudo pericial e o contexto do processo; Paulo Romero analisa tecnicamente e aponta fragilidades, inconsistências ou pontos que sustentam a tese de defesa — o formato exato (reunião, parecer escrito, ou os dois) é combinado conforme a necessidade do caso.</p>
+      </details>
+      <details>
+        <summary><span><span class="faq-tag">Advogados</span>Atende qualquer área da Medicina Legal?</span></summary>
+        <p>Sim — desde traumatologia e tanatologia forense até sexologia, psiquiatria e toxicologia forenses, conforme a matéria do processo.</p>
+      </details>
+      <details>
+        <summary><span><span class="faq-tag">Candidatos</span>Pra quem é a mentoria de concurso?</span></summary>
+        <p>Para candidatos a concursos de perícia oficial (médico-legista, perito criminal) que querem preparação individual, não um curso genérico.</p>
+      </details>
+      <details>
+        <summary><span><span class="faq-tag">Candidatos</span>Como funciona o pagamento?</span></summary>
+        <p>À vista por R$ 499,90 ou em até 3 vezes sem juros de R$ 166,67 no cartão, processado pela Hotmart. Garantia incondicional de 7 dias.</p>
+      </details>
+      <details>
+        <summary><span><span class="faq-tag">Geral</span>Preciso ser da área médica?</span></summary>
+        <p>Não. Advogados e outros profissionais do direito são atendidos normalmente nas duas frentes — a mentoria de concurso também recebe candidatos não-médicos, quando aplicável ao cargo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-soft)">Próximo passo</div>
+    <h2 style="margin-top:8px">Fale com quem já esteve nos dois lados — na prova e no laudo.</h2>
+    <p>Vagas e atendimentos individuais — cada caso é acompanhado diretamente pelo perito.</p>
+    <div class="hero-paths">
+      <a class="btn btn-gold" href="#advogados">Sou advogado(a)</a>
+      <a class="btn btn-line" href="#candidatos">Sou candidato(a) a concurso</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2025 Decisium — todos os direitos reservados.<br/>
+    Consultoria em Medicina Legal para concursos e processos judiciais.
+  </div>
+</footer>
+
+</body></html>
